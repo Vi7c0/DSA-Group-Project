@@ -1,0 +1,9 @@
+START
+
+FUNCTION Want_To_Make_Playlist():
+	Print("Would you like to make a playlist? ")
+	Input make_playlist
+	IF( make_playlist == "yes")
+		//call function
+	else 
+		end program
