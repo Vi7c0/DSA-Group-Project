@@ -1,12 +1,6 @@
 START
 
-FUNCTION skip():
-	//stuff
-
-FUNCTION Pause():
-	//stuff
-
-FUNCTION rewind():
+FUNCTION Pause(playlist):
 	//stuff
 
 FUNCTION delete_song(playlist):
@@ -14,9 +8,26 @@ FUNCTION delete_song(playlist):
 	playlist.remove(song_name)
 
 FUNCTION play_music(playlist):
-	FOR(int i = 0; i < playlist.size(); i++)
-		playsong
+	While ( //Whatever )
+		Print(playlist)
 
+		//rewind
+		song_position = i 
+		Print("Want to backward or forward in song list")
+		PRint("1 for forward. 2 for backward")
+		INTEGER rewind
+		IF (rewind == 1):
+			song_position = song_position - 1
+			Print(playlist.get(song_position))
+		ELSE-IF(rewind == 2):
+			song_position = song_position + 1
+			Print(playlist.get(song_position))		
+		ENDIF
+
+	ENDDO
+	
+	
+	
 FUNCTION playlist_creation():
 	LinkedList<String> playlist = new LinkedList<String>()
 	INTEGER Counter = 1
