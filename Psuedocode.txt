@@ -1,9 +1,64 @@
 START
 
-FUNCTION Want_To_Make_Playlist():
-	Print("Would you like to make a playlist? ")
-	Input make_playlist
-	IF( make_playlist == "yes")
-		//call function
-	else 
+FUNCTION skip():
+	//stuff
+
+FUNCTION Pause():
+	//stuff
+
+FUNCTION rewind():
+	//stuff
+
+FUNCTION delete_song(playlist):
+	Input song_name
+	playlist.remove(song_name)
+
+FUNCTION play_music(playlist):
+	FOR(int i = 0; i < playlist.size(); i++)
+		playsong
+
+FUNCTION playlist_creation():
+	LinkedList<String> playlist = new LinkedList<String>()
+	INTEGER Counter = 1
+	While (Counter == 1) DO:
+		Input song_name
+		IF(song_name in playlist):
+			Print("Song is already in playlist.")
+		ELSE:
+			playlist.add(song_name)
+		ENDIF
+		
+		Print("Do you still want to add a song? ")
+		Input Answer
+		IF(Answer == "Yes"):
+			playlist_creation()
+		ENDIF
+
+		IF (Answer == "No"):
+			play_music()
+		ENDIF
+		
+		
+		
+FUNCTION Main():
+	Integer Answer
+	Print("Make a playlist press 1")
+	Print("Delete a sond press 2")
+	Print("Play songs press 3")
+	Print("End program press 4")
+	
+	IF(Answer == 1):
+		playlist_creation()
+
+	ELSE-IF(Answer == 2):
+		delete_song()
+
+	ELSE-IF(Answer == 3):
+		play_music()
+
+	ELSE-IF(Answer == 4):
 		end program
+		
+	ENDIF	
+
+Main()
