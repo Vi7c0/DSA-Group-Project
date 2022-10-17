@@ -1,21 +1,18 @@
 START
 
-FUNCTION Pause(playlist):
-	//stuff
-
 FUNCTION delete_song(playlist):
 	Input song_name
 	playlist.remove(song_name)
 
 FUNCTION play_music(playlist):
 	While ( //Whatever )
-		Print(playlist)
+		playlist.get(song).play()
 
 		//rewind
 		song_position = i 
 		Print("Want to backward or forward in song list")
-		PRint("1 for forward. 2 for backward")
-		INTEGER rewind
+		Print("1 for forward. 2 for backward")
+		INPUT rewind
 		IF (rewind == 1):
 			song_position = song_position - 1
 			Print(playlist.get(song_position))
@@ -24,7 +21,16 @@ FUNCTION play_music(playlist):
 			Print(playlist.get(song_position))		
 		ENDIF
 
-	ENDDO
+		//pause
+		INPUT pause_button
+		
+		if(pause_button == is_pressed):
+			playlist.pause()
+				
+			 
+		
+
+	ENDWHILE
 	
 	
 	
