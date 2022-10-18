@@ -5,7 +5,8 @@ FUNCTION delete_song(playlist):
 	playlist.remove(song_name)
 
 FUNCTION play_music(playlist):
-	While ( //Whatever )
+	counter = 1
+	While ( counter == 1 )
 		playlist.get(song).play()
 
 		//rewind
@@ -24,10 +25,14 @@ FUNCTION play_music(playlist):
 		//pause
 		INPUT pause_button
 		
-		if(pause_button == is_pressed):
+		IF(pause_button == is_pressed):
 			playlist.pause()
-				
-			 
+		ENDIF
+
+		INPUT exit_button
+		IF(exit_button == is_pressed):
+			counter = counter + 1
+			Main()	 
 		
 
 	ENDWHILE
